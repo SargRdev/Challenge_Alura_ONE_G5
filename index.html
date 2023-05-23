@@ -3,47 +3,55 @@
 
 <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <title>ENCRIPTADOR-ONE-ALURA</title>
-
 
 </head>
 
 <body>
-    <div class="contenedor">
+    <header>
+        <img class="logo" src="imagenes/Logo-1.png" alt="logo">
+    </header>
+    <main>
+        <section class="seccion-ingrese-texto">
+            <textarea class="textArea" id="texto" name="textoEntrada" id="" placeholder="Ingresa el texto aqui"
+                cols="30" rows="10"></textarea>
 
 
-        <header>
-            <h1 class="logo"><img src="imagenes/Logo-1.png" alt="logo"></h1>
-        </header>
-        <main>
-            <section class="seccion-ingrese-texto">
-                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aqui"></textarea>
+            <div class="info">
+                <img src="imagenes/bi_exclamation-circle-fill-1.png" alt="">
+                <h6>Solo letras minúsculas y sin acentos.</h6>
+            </div>
 
-                <div class="informacion">
-                    <img src="imagenes/bi_exclamation-circle-fill-1.png" alt="bi_exclamation-circle-fill-1.png">
-                    <p>Solo letras minúsculas y sin acentos.</p>
+            <div class="caja-botones">
+                <input type="button" id="btn-encriptar" class="botonEncriptar" value="Encriptar"
+                    onclick="btnEncriptar()" />
 
-                </div>
-                <div class="caja-botones">
-                    <input type="button" id="btn-encriptar" class="botones" value="Encriptar" />
+                <input type="button" id="btn-desencriptar" class="botonDesencriptar" value=" Desencriptar"
+                    onclick="btnDesencriptar()" />
+            </div>
+        </section>
+        <section>
+            <div class="msj-contenedor">
+                <img class="muneco" src="imagenes/Muñeco.png" alt="Muñeco" placeholder="">
+                <textarea class="mensaje" id="mensaje" cols="30" rows="15"></textarea>
 
 
-                    <input type="button" id="btn-desencriptar" class="botones" value=" Desencriptar" />
-            </section>
-        </main>
-        <div class="mostrar">
-
-            <p><span><img class="muñeco" src="imagenes/Muñeco.png" alt="muñeco"></span></p>
-            <p><img src="imagenes/Frame 6.png" alt=""></p>
-            
-        </div>
+                    <button onclick="myFunction()" onmouseout="outFunc()" class="botonCopiar tooltip"> <span class="tooltiptext"
+                            id="btnCopiar">Copiar</span>
+                        </button>
       
-    </div>
+
+            </div>
+        </section>
+    </main>
+
     <footer>
         <p>&copy;Sergio Robles</p>
     </footer>
+
+    <script src="funciones.js"></script>
 </body>
 
 </html>

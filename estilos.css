@@ -1,98 +1,155 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap");
 
 * {
-  margin: 0;
-  list-style: none;
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 body {
-  background: #e5e5e5;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    background: #E5E5E5;
 }
 
-.contenedor {
-  position: relative;
-  width: 1440px;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #e9ecf8;
+header {
+    grid-area: header;
 }
 
 .logo {
-  position: absolute;
-  margin: 40px;
+    width: 20%;
+    margin-left: 10px;
+    padding-top: 10px;
 }
 
-.seccion-ingrese-texto {
-  position: absolute;
-  top: 168px;
-  left: 240px;
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
 }
 
-#texto {
-  background-color: #e9ecf8;
-  width: 577px;
-  height: 575px;
-  border: none;
-  resize: none;
-  outline: none;
-  font-size: 32px;
-  color: #0a3871;
+.textArea {
+    width: 100%;
+    border: none;
+    color: #0a3871;
+    resize: none;
+    text-align: center;
+    font-size: 24px;
+    background: #E5E5E5;
+    font-weight: 600;
 }
 
-#texto::placeholder {
-  font-size: 32px;
-  color: #0a3871;
+::placeholder {
+    color: #0a3871;
 }
 
-.informacion {
-  display: flex;
-  margin-bottom: 16px;
-  gap: 8px;
+
+.textArea:focus {
+    outline: none;
+}
+
+
+.info {
+    display: flex;
+    gap: 5px;
+}
+
+h6 {
+    color: #495057;
+    gap: 5px;
+}
+
+.info img {
+    width: 20px;
 }
 
 .caja-botones {
-  display: flex;
-
-  width: 680px;
-  height: 67px;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
 }
 
-.botones {
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  width: 328px;
-  height: 67px;
-  border-radius: 24px;
-  border: 1px solid #0a3871;
-  font-weight: bold;
-  line-height: 19px;
+.botonEncriptar {
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: white;
+    height: 67px;
+    width: 300px;
 }
 
-#btn-encriptar {
-  background-color: #0a3871;
-  color: white;
+.botonDesencriptar {
+    background-color: #D8DFE8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    height: 67px;
+    width: 300px;
 }
 
-#btn-desencriptar {
-  background-color: #d8dfe8;
-  color: #0a3871;
-  border: 1px solid #0a3871;
+.msj-contenedor {
+    display: flex;
+    justify-content: center;
 }
 
-.mostrar{
-  position: absolute;
-  width: 390px;
-  height: 810px;
-  left:1000px;
-  top:40px;
-  background-color: white;
-  border-radius: 32px;
-  }
+.mensaje {
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: 32px;
+    color: #0a3871;
+    border: none;
+    resize: none;
+    margin-top: 80px;
+    position: relative;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 24px;
+}
 
-  .muñeco{
-    margin: 240px 32px 370px 32px;
-  }
+.mensaje:focus {
+    outline: none;
+}
+
+.muneco {
+    position: absolute;
+    z-index: 100;
+    align-self: center;
+    width: 310px;
+}
+
+.botonCopiar {
+    width: 300px;
+    background-color: #D8DFE8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    height: 67px;
+    margin-top: 485px;
+    position: absolute;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    text-align: center;
+    font-size: 16px;
+}
+
+
 
