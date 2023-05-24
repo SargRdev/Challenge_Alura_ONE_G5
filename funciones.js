@@ -2,25 +2,39 @@ let texto = document.getElementById("texto")
 let mensaje = document.querySelector("#mensaje")
 let muneco = document.querySelector(".muneco")
 
+function inicio() {
+
+}
+mensaje.addEventListener("input", function () {
+   if (mensaje.value.length > 0) {
+      muneco.style.display = "none"
+   } else {
+      muneco.style.display = "block"
+   }
+})
+
+window.addEventListener("load", inicio)
+
 function myFunction() {
    var copyText = document.getElementById("mensaje");
    copyText.select();
    copyText.setSelectionRange(0, 99999);
    navigator.clipboard.writeText(copyText.value);
-   
+
    var btnCopiado = document.getElementById("btnCopiar");
    btnCopiado.innerHTML = "Copiado: " + copyText.value;
- }
- 
+}
+
 function btnEncriptar() {
    let textoCifrado = encriptar(texto.value)
-   mensaje.value = textoCifrado 
+   mensaje.value = textoCifrado
+   muneco.style.display = "none"
 }
 
 function btnDesencriptar() {
    let textoCifrado = Desencriptar(texto.value)
-       mensaje.value = textoCifrado
-      muneco.style.display = "none";
+   mensaje.value = textoCifrado
+   muneco.style.display = "none"
 }
 
 function encriptar(stringEncriptar) {
